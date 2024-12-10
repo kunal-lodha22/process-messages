@@ -98,7 +98,7 @@ def api_process_message():
             return jsonify({"error": "Missing text_message in request body"}), 400
 
         new_message = {
-            "id": data.get("id", str(uuid.uuid4())),
+            "id": str(data.get("id")),
             "text_message": data["text_message"],
         }
 
