@@ -192,7 +192,7 @@ def assess_message():
                         "assessment_date": current_date.isoformat(),
                     }
                 ).execute()
-        general_assessments = ["Positive self-talk", "good mood "]
+        general_assessments = ["Positive self-talk", "good mood"]
         for assessment in general_assessments:
             outcome = evaluate_message_for_assessment(message_text, assessment)
             if outcome is not None:
